@@ -1,0 +1,76 @@
+.gradient-background {
+    background: linear-gradient(300deg, #44eed2, #3eb4ae, #48CFCB);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  h1{
+    font-family: "Edu QLD Beginner";
+    
+  }
+
+  #skills h3{
+    color: whitesmoke;
+  }
+
+  #navbar a{
+    color: whitesmoke;
+  }
+
+  #navbar > div{
+    background-color: #222831;
+  }
+
+  #home > div{
+    background-color: #222831;
+  }
+
+  .imgholder > #screen{
+    position:absolute;
+    right: 100px;
+    transform: rotate(45deg);
+    height: 100px;
+    opacity: 50%;
+  }
+
+  .imgholder > #pie{
+    position:absolute;
+    left: 100px;
+    transform: rotate(-33deg);
+    height: 100px;
+    opacity: 50%;
+  }
+
+  span{
+    color: coral;
+  }
+  #home p{
+    color: #44d1d8;
+  }
+
+  #about p {
+    color:#424242
+  }
+
+  #contact h3{
+    color: #3eb4ae;
+  }
+
+  #contact p{
+    color: antiquewhite;
+  }
+  footer span{
+    color: whitesmoke;
+  }  
