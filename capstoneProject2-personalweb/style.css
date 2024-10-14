@@ -74,3 +74,9 @@
   footer span{
     color: whitesmoke;
   }  
+
+  @media (max-width: 500px) {
+    #about .imgholder > img {
+      display: none;
+    }
+  }
