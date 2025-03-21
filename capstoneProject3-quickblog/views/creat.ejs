@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs")%>
+<div class="px-4 py-5 mb-5"> 
+<h2 class="display-5 mb-5 fw-bold text-center text-body-emphasis">Create New Blog Post</h2>
+<hr> 
+<div class="container my-4">
+<!-- <section class="container my-4"> -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <form action="/submit" method="POST">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Post Title</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Enter post title" required>
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">Post Content</label>
+                    <textarea class="form-control" id="content" rows="10" name="content" placeholder="Write your post here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Publish Post</button>
+                <button type="button" class="btn btn-outline-secondary"><a href="/" class="nav-link">Cancel</a></button>
+
+            </form>
+        </div>
+    </div>
+</div>
+<!-- </section> -->
+
+<%- include("partials/footer.ejs")%>

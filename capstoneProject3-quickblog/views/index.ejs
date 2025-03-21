@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs")%>
+
+  <section id="home">
+    <div class="px-4 py-5 my-5 text-center">   
+        <h1 class="display-5 fw-bold text-body-emphasis">Share Your Story</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">At QuickBlog, every story matters. It is more than just a blog; It is a vibrant place for sharing unique experiences and insights. Whether it's a triumph, a lesson learned, or an unforgettable adventure, your story can inspiring. Upload your experiences and be part of a collective journey!</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+            <a href="/new" class="nav-link"><button type="button" class="btn btn-primary btn-lg px-4 gap-3">Creat New Blog</button></a>
+            <a href="/view-posts" class="nav-link"><button type="button" class="btn btn-outline-secondary btn-lg px-4">View Posts</button></a>
+          </div>
+        </div>
+        <div class="overflow-hidden" style="max-height: 30vh;">
+          <div id="blog-img" class="container px-5">
+            <img class="d-block mx-auto mb-4" src="/assets/IMG_0519.JPG" alt="blog_img" width="512" height="512">
+          </div>
+        </div>
+    </div>
+  </section>
+  
+<%- include("partials/footer.ejs")%>

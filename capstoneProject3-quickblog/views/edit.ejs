@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs")%>
+<div class="px-4 py-5 mb-5"> 
+    <h2 class="display-5 mb-5 fw-bold text-center text-body-emphasis">Edit the Blog Post</h2>
+    <hr> 
+    <div class="container my-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <form action="/edit/<%= blog.id %>" method="POST">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title:</label>
+                        <input type="text" class="form-control" id="title" name="title" value="<%= blog.title %>" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="content" class="form-label">Content:</label>
+                        <textarea class="form-control" id="content" rows="10" name="content" required><%= blog.content %></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Update Post</button>
+                    <button type="button" class="btn btn-outline-secondary"><a href="/view-posts" class="nav-link">Cancel</a></button>
+    
+                </form>
+            </div>
+        </div>
+    </div>
+
+<%- include("partials/footer.ejs")%>
