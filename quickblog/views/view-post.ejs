@@ -1,0 +1,49 @@
+<%- include("partials/header.ejs") %>
+
+
+<div class="px-4 py-5 mb-5 text-center">   
+    <% if (blogs.length==0) { %>
+      <h2 class="display-5 mb-5 fw-bold text-body-emphasis">Oops! No Blogs Yet.</h1>
+        <hr>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center m-5">
+          <button type="button" class="btn btn-primary btn-lg px-4 gap-3"><a href="/new" class="nav-link">Create new blog insted</a></button>
+        </div>
+        <hr>
+    <% } else { %>
+     
+    <h2 class="display-5 mb-5 fw-bold text-body-emphasis">Check out past blogs</h1>
+      <hr>
+      <div class="container">
+      <div class="<%= blogs.length % 2!=0 ? 'row g-3 mb-2 justify-content-center' : 'row g-3 mb-2' %>">
+    <% blogs.forEach(blog => { %>
+        
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-100 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary-emphasis">QuickBlog</strong>
+              <h3 class="mb-0"><%= blog.title %></h3>
+              <div class="mb-1 text-body-secondary"><%= blog.date %></div>
+              <p class="card-text mb-auto"><%= blog.content %></p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-3">
+                <form action="/edit/<%= blog.id %>" method="GET">
+                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Edit</button>
+                </form>
+                <form action="/delete/<%= blog.id %>" method="GET">
+                  <button type="submit" class="btn btn-outline-secondary btn-lg px-4">Delete</button>
+                </form>
+                </div>
+            </div>
+          </div>
+        </div>
+          
+  <% }) %>
+          
+      </div>
+    </div>
+    
+  <% } %>
+
+</div>
+
+
+<%- include("partials/footer.ejs") %>
